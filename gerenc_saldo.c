@@ -1,16 +1,19 @@
 
 void ativação_e_conf_do_display(){
-
+    // 
 }
 
 void display_ativação(char numeros_a_ser_recebidos [] ){
-// recebe um vetor do tipo [9,9,-,2]. Os dois primeiros dados representamo saldo e os dois ultimos o numero 
-//aleatorio gerado
-// Aqui vai fazer a exibição do display.
+    // recebe um vetor do tipo [9,9,-,2]. Os dois primeiros dados representamo saldo e os dois ultimos o numero 
+    //aleatorio gerado
+    // Aqui vai fazer a exibição do display.
 }
 
 capitação_de_voz(){
-
+    // captura os dados de entreda via mic i2s
+    // os dados são armazenados no buffer
+    // aqui também está a lógica de detecção do "barulho" (sempre que a freq for maior q 5x o 'ruido' do buffer anterior)
+    // quando a detecção for acionada deve enviar 5xbuffer para o servidor
 }
 
 
@@ -31,11 +34,11 @@ int gerenciador_de_saldo(int num_aleatorio,int saldo_altual, int opcao){
 }
 
 void conexão_wifi(){
-// bloco de código responsavel por fazer a conexão wifi
+    // bloco de código responsavel por fazer a conexão wifi
 }
 
 char gerenciador_de_exibição (int num_aleatorio, int saldo){
-
+    //
 }
 
 int main(){
