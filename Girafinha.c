@@ -24,6 +24,10 @@ int gerador_de_numero_aleatorio(int num_tentativa ){
     // e o tempo de permanência de cada número é de 250 ms.
     //A partir da quinta jogada, a probabilidade de um número negativo aparcer 
     //é 70% e o tempo de permanência do negativo é de 250 ms enquanto o positivo é de 150 ms
+    //nome da função dentro da bb é generate_number
+    //num_tentativa é a chance de vir negativo
+    // ela retorna um numero inteiro 
+    
 }
 
 int gerenciador_de_saldo(int num_aleatorio,int saldo_altual, int opcao){
