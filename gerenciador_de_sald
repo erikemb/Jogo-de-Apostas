@@ -1,0 +1,54 @@
+// O CÓDIGO PRECISA DE PEQUENAS ALTERAÇÕES PARA FAZER A INTEGRAÇÃO COM SISTEMA
+//SUGESTÃO: TESTAR NA MAIN TODO O RETORNO DE SALDO DA FUNÇÃO SE 0 OU 99 ENCERRA O JOGO
+//SUGESTÃO: TIRAR OS PRINTF'S DO CÓDIGO, UTILIZEI PARA VER SE ESTAVA FUNCIONANDO.
+//SUGESTÃO: EU COLOQUEI A MAIN AQUI PARA TESTAR A FUNÇÃO DE GERENCIAMENTO DE SALDO
+
+#include <stdio.h>
+
+// Função para gerenciar o saldo
+// Antes de mandar para atualização testar o valor de saldo se é 0 ou 99
+int gerenciador_de_saldo(int num_aleatorio, int saldo_atual, int opcao) {
+    // Se a opção for 0, o usuário pede crédito
+    if (opcao == 0) {
+        saldo_atual += 30; // Adiciona 30 ao saldo
+        if (saldo_atual >= 99) {
+            saldo_atual = 99; // Garante que o saldo não ultrapasse 99
+            printf("Saldo atual: %d\n FIM DE JOGO\n", saldo_atual);
+        }
+    }
+    // Se a opção for 1, o usuário quer pegar o número aleatório
+    else if (opcao == 1) {
+        saldo_atual += num_aleatorio; // Soma o número aleatório ao saldo
+        if (saldo_atual <= 0) {
+            saldo_atual = 0; // Garante que o saldo não seja negativo
+            printf("Saldo atual: %d\n FIM DE JOGO\n", saldo_atual);
+        }else{
+            if (saldo_atual >= 99) {
+            saldo_atual = 99; // Garante que o saldo não ultrapasse 99
+            printf("Saldo atual: %d\n FIM DE JOGO\n", saldo_atual);
+        }
+        }
+    }
+    return saldo_atual; // Retorna o saldo atualizado
+}
+
+//TRECHO DE CÓDIGO PARA TESTE, NÃO SERÁ UTILIZADO NA CONSTRUÇÃO DO TRABALHO
+
+int main() {
+    int saldo = 50; // Saldo inicial
+    int num_aleatorio = -20; // Um número aleatório (pode ser gerado de outra forma)
+    int opcao;
+
+    while(opcao!=3){  
+          printf("Saldo atual: %d\n", saldo);
+
+    printf("Escolha uma opcao \n0 para credito\n 1 para pegar numero aleatorio\n 3 para sair do loop\n\n opcao): ");
+    scanf("%d", &opcao);
+
+    // Atualiza o saldo com base na opção do usuário
+    saldo = gerenciador_de_saldo(num_aleatorio, saldo, opcao);
+
+    printf("Saldo atualizado: %d\n****************************\n", saldo);
+    }
+    return 0;
+}
